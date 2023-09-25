@@ -4,6 +4,17 @@
 SQL query to report the IDs of the transactions with the maximum amount on their respective day. If in one day there are multiple 
 such transaction, return all of them. 
 
+~~~ use que1 ; 
+select * from transactions ; 
+
+with max_transaction as (
+select day,transaction_id, amount, rank() over(partition by date(day) order by amount desc ) as ranks
+      from transactions
+)
+select transaction_id from max_transaction
+where ranks = 1 
+order by transaction_id; ~~~
+
 ____
 
 ### Question 2 - Orders with maximum quantity 
