@@ -6,12 +6,12 @@ such transaction, return all of them.
 use que1 ;
 select * from transactions ;
 
-transaction_id       day               amount
-8	            2021-04-03 15:57:28	57
-9	            2021-04-28 08:47:25	21
-1	            2021-04-29 13:28:30	58
-5	            2021-04-28 16:39:59	40
-6	            2021-04-29 23:39:28	58
+transaction_id       day                     amount
+8	            2021-04-03 15:57:28	      57
+9	            2021-04-28 08:47:25	      21
+1	            2021-04-29 13:28:30	      58
+5	            2021-04-28 16:39:59	      40
+6	            2021-04-29 23:39:28	      58
 
 
 with max_transaction as (
@@ -42,21 +42,21 @@ The MAX quantity of an order is the highest quantity of any single product in th
 use que2 ; 
 select * from ordersdetails ;
 
-order_id	product_id	quantity
-1	            1	12
-1	            2	10
-1	            3	15
-2	            1	8
-2	            4	4
-2	            5	6
-3	            3	5
-3	            4	18
-4	            5	2
-4	            6	8
-5	            7	9
-5	            8	9
-3	            9	20
-2	            9	4
+order_id	product_id      quantity
+1	            1	            12
+1	            2	            10
+1	            3	            15
+2	            1	            8
+2	            4	            4
+2	            5	            6
+3	            3	            5
+3	            4	            18
+4	            5	            2
+4	            6	            8
+5	            7	            9
+5	            8	            9
+3	            9	            20
+2	            9	            4
 
 
 with quantity_above_avg as (
@@ -111,11 +111,11 @@ from frequent_Table
 where rank_p = 1 
 order by customer_id, product_id;
 
-product_id      	product_name	price
-1	            keyboard	      120
-2	            mouse            	80
-3	            screen	      600
-4	            hard disk	      450
+product_id      product_name	price
+1	           keyboard	  120
+2	           mouse          80
+3	           screen         600
+4	           hard disk      450
 
 ~~~
 
@@ -129,7 +129,7 @@ An account should be banned if it was logged in at the same moment from two diff
 use que4 ; 
 select * from loginfo;
 
-account_id      	ip_address	      login	                  logout
+account_id      	ip_address	      login	            logout
 1	                  1	2021-02-01 09:00:00	2021-02-01 09:30:00
 1	                  2	2021-02-01 08:00:00	2021-02-01 11:30:00
 2	                  6	2021-02-01 20:30:00	2021-02-01 22:00:00
