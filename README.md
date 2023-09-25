@@ -182,22 +182,23 @@ join calls c2 on c2.callee_id = p.id;
 
 select * from join_t;
 
-name      	phone_number        duration
-Rachel	972-0011100	            33
-Rachel	972-0011100	            4
-Maroua	212-6523651	            59
-Elvis	      051-7654321	            102
-Elvis	      051-7654321            	330
-Jonathan	051-1234567            	5
-Jonathan	051-1234567            	5
-Rachel	972-0011100            	13
-Moncef	212-1234567	            3
-Moncef	212-1234567	            3
-Moncef	212-1234567	            3
-Meir	      972-1234567	            1
-Meir	      972-1234567            	1
-Meir	      972-1234567            	7
-Meir      	972-1234567	            7
+name            	phone_number        duration
+Rachel	      972-0011100	            33
+Rachel	      972-0011100	            4
+Maroua	      212-6523651	            59
+Elvis	            051-7654321	            102
+Elvis	            051-7654321            	330
+Jonathan	      051-1234567            	5
+Jonathan	      051-1234567            	5
+Rachel	      972-0011100            	13
+Moncef	      212-1234567	            3
+Moncef	      212-1234567	            3
+Moncef	      212-1234567	            3
+Meir	            972-1234567	            1
+Meir	            972-1234567            	1
+Meir	            972-1234567            	7
+Meir      	      972-1234567	            7
+
 
 with country_table as (
 select name, phone_number, duration, 
