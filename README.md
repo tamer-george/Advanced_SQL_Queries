@@ -5,16 +5,36 @@ SQL query to report the IDs of the transactions with the maximum amount on their
 such transaction, return all of them. 
 
 ~~~
-use que1 ; 
-select * from transactions ; 
+use que1 ;
+
+select * from transactions ;
+
+transaction_id       day               amount
+8	            2021-04-03 15:57:28	57
+9	            2021-04-28 08:47:25	21
+1	            2021-04-29 13:28:30	58
+5	            2021-04-28 16:39:59	40
+6	            2021-04-29 23:39:28	58
+
+# created a view table
 
 with max_transaction as (
 select day,transaction_id, amount, rank() over(partition by date(day) order by amount desc ) as ranks
       from transactions
 )
+
+# outside query
+
 select transaction_id from max_transaction
 where ranks = 1 
 order by transaction_id;
+
+# return maximum transaction each day 
+transaction_id  amount
+1	           58
+5	           40
+6	           58
+8	           57
 
  ~~~
 
