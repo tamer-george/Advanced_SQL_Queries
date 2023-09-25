@@ -6,7 +6,6 @@ such transaction, return all of them.
 
 ~~~
 use que1 ;
-
 select * from transactions ;
 
 transaction_id       day               amount
@@ -22,13 +21,10 @@ select day,transaction_id, amount, rank() over(partition by date(day) order by a
       from transactions
 )
 
-# outside query
-
 select transaction_id from max_transaction
 where ranks = 1 
 order by transaction_id;
 
-# return maximum transaction each day 
 transaction_id  amount
 1	           58
 5	           40
@@ -176,7 +172,6 @@ use que5 ;
 select * from calls; 
 select * from person ; 
 select * from country ; 
-
 
 create view  
 join_t as
