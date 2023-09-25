@@ -16,9 +16,9 @@ ____
 ### Question 3 - The most frequently ordered products for each customer. 
 SQL query to find the most frequently ordered products for each customer. 
 
-Table I   : Customers - table that contains information about the customer 
-table II  : Orders - contains information about the orders made by customer_id 
-table III : Products - This table contains information about the products 
+- Table I   : Customers - table that contains information about the customer 
+- Table II  : Orders - contains information about the orders made by customer_id 
+- Table III : Products - This table contains information about the products 
 
 
 ___
@@ -36,12 +36,12 @@ The company intends to invest in the countries where the average call duration o
 the global average call duration. 
 
 
-Table I   : Person  - Each row of this table contains the name of the person and their phone number
-table II  : Country - The table contains the country name and its code 
-table III : Calls   - There is no primary key for this table , it may contain duplicates. It contain the caller_id, callee_id and the duration of the call 
+- Table I   : Person  - Each row of this table contains the name of the person and their phone number
+- Table II  : Country - The table contains the country name and its code 
+- Table III : Calls   - There is no primary key for this table , it may contain duplicates. It contain the caller_id, callee_id and the duration of the call 
                       in minutes. Note: caller_id != callee_id
 
-____                      
+                      
 
 
 
